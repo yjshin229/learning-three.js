@@ -1,0 +1,56 @@
+Transform objects:
+need 4 properties to transform an object.
+- position
+- scale
+- rotation
+- quaternion
+
+all classes that inherit from object 3d possess those properties like perspective
+camera or mesh
+
+properties will be compiled in matrices
+
+How to move objects?
+objects move along axis. x,y,z (x:horizontal, y: vertical, z: depth)
+
+mesh.position.length() : tells how far your object is from the center
+mesh.positon.distanceTo(somekindofobject.position) : the distance between your mesh and another object such as the camera
+mesh.position.normalize(): this will reduce the vector to 1
+
+set?
+useful when updating all three xyz properties
+mesh.position.set(x,y,z)\
+
+Axes Helper:
+it is a class inside three.js
+display colored line for each axis
+
+Scale objects:
+also uses 3 properties xyz vector
+
+Rotate objects:
+2 ways:
+    1. rotation
+        x,y,z euler 
+        first think what axis you are going to rotate along
+        half a rotation is pi and you can use Math.pi for this
+        in rotation order matters. 
+        -> can cause a gimbal lock
+            : can try object.rotation.reorder('yxz') 
+            reorder needs to be called before changing the properties of rotation
+    2. quaternion
+        can get the same result with rotation but is a lot harder
+        quaternion updates when you change rotation
+
+Look At:
+you can make the camera to look at something. possibly an object
+camera.lookAt(new THREE.vector3(x,y,z))
+or camera.lookAt(mesh.position)
+
+Combining Transformations:
+combining position, rotation and scale.
+order does not matter
+
+Scene Graph:
+you can put objects inside groups and use position, rotation, scale on those groups
+you can group things up and transform them all together at once

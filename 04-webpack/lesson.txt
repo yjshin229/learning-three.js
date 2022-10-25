@@ -1,0 +1,16 @@
+bundler: tool you can send js, css, html, images. stylus, Saas, etc.
+bundler can run a local server, manage dependencies, 
+improve compatibility(transfer js, deploy website etc.)
+Why webpack?
+- most popular
+- handle a lot of our needs (local server, module etc.)
+- good documentation, community, well mantained
+- a little hard to configure tho
+
+run: npm run dev
+build: npm run build 
+
+working files are inside the src folder (html, css, js)
+the root of all work in webpack is the js file(script.js)
+the script file inside index.html is not required. it is added automatically
+style of script.js is in the style.css file
