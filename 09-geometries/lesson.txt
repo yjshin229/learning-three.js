@@ -64,3 +64,5 @@ Creating BufferGeometry
             1,0,0
         })
 
+why use positionsArray?
+    send less data to renderer therefore, the performance will be better.
