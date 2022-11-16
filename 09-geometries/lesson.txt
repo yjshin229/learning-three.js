@@ -1,0 +1,66 @@
+what is geometry?
+    composed of vertices and faces
+    vertices = point coordinates in 3d space
+    faces = triangles composed with vertices that creates a surface
+
+geometry can be used as meshes but also particles
+    particles = each on vertices
+
+can store more data than vertices coordinates
+    position, uv coordinates, normal, color, random value, size etc.
+    literally any data!
+
+Built-in geometries
+    in BufferGeometry class => built in methods like translate, rotateX, normalize etc.
+    - BoxGeometry
+    - PlaneGeometry 
+    - CircleGeometry
+    - ConeGeometry
+    - CylinderGeometry
+    - RingGeometry
+    - TorusGeometry
+    - TorusKnotGeometry
+    - DodgecahedronGeometry 
+    etc.
+
+    combining these geometry can creawte a complex shape.
+
+    BoxGeometry =>
+    width, height, depth, widthSegments, heightSegments, depthSegments
+    Segments = how many triangles exist on that plane of side
+    ex) 2heightSegments and 2widthSegments = 8 triangles on that plane
+
+    segments are only needed if you wnat to create complex shapes on the plane.
+    ex) many segments on a PlaneGeometry to create humps 
+    each vertices on the triangle is translated in terms of height to create specfic shapes
+
+material =>
+    wireframe:true => shows the outline of the triangles on the planes
+
+Creating BufferGeometry
+    - crete BufferGeometry
+        - use Float32Array => is a typed array, can only store floats, is fixed length, easier to handle for the comp.
+
+        creating Float32Array:
+        const positionsArray = new Float32Array(9);
+        //first vertice : 
+        position[0] = 0 //x
+        position[1] = 0 //y
+        position[2] = 0 //z
+
+        position[0] = 0 //x
+        position[1] = 1 //y
+        position[2] = 0 //z
+
+        position[0] = 1 //x
+        position[1] = 0 //y
+        position[2] = 0 //z
+
+        OR
+
+        const positionsArray = newFloat32Array({
+            0,0,0,
+            0,1,0,
+            1,0,0
+        })
+
