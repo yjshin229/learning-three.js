@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.webgl /*canvas class name in html file */
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline:none;
+}
+/*can use either one*/
+
+/*Preventing scorll when we don't use control in our project*/
+
+html,body{
+    overflow:hidden;
+}
