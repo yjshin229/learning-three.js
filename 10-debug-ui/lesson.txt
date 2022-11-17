@@ -1,0 +1,36 @@
+Debug easily -> debug UI
+debugUI:
+    - dat.GUI
+    - control-panel
+    - ControlKit
+    - Guify
+    - Oui
+
+dat.GUI -> most popular
+implementing dat.GUI:
+add gsap dependency => import gsap from 'gsap'
+install lil.gui and import => import * as dat from 'lil-gui';
+
+dat.GUI() parameters:
+Range, Color, Text, checkBox(true,false), select, button, folder etc.
+
+adding elements = tweak:
+gui.add()
+
+
+TIPS!
+hide panel by using the following code:
+window.addEventListener('keydown', (event) => {
+    if(event.key === 'h'){
+        if(gui._hidden){
+            gui.show();
+        }else{
+            gui.hide();
+        }
+    }
+})
+
+
+How and when to use it?
+
+tweaking things get much easier
